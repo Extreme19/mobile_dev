@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "505622499164",
+    "firebase_url": "https://fir-a7535.firebaseio.com",
+    "project_id": "fir-a7535",
+    "storage_bucket": "fir-a7535.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505622499164:android:0a77def15e86625adafb99",
+        "android_client_info": {
+          "package_name": "com.example.Orsul_v1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "505622499164-n5ct958e06vspefa2e0oug6u6h8ahkl8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdTTNjMEhS4bLzeCcqi8jhSdn33IjTKL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "505622499164-n5ct958e06vspefa2e0oug6u6h8ahkl8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "505622499164-82qlbdrlmsor0908sk1r74pp2tkj0q8b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.joshdemo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
