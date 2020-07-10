@@ -1,11 +1,15 @@
+//import 'dart:ffi';
+
 import 'package:Orsul_v1/Tabs/homeTab.dart';
 import 'package:Orsul_v1/Tabs/jobsTab.dart';
 import 'package:Orsul_v1/Tabs/messageTab.dart';
 import 'package:Orsul_v1/Tabs/walletTab.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+
 
 
 class Home extends StatefulWidget {
@@ -52,6 +56,49 @@ class _HomeState extends State<Home> {
       //     }
       //   },
       //   )
+      drawer: Drawer(
+        child: ListView(
+          children:[
+            UserAccountsDrawerHeader(
+        accountName: Text("Joshua"), 
+        accountEmail: Text("adeniyioojo09@gmail.com"),
+        currentAccountPicture: GestureDetector(
+          child: CircleAvatar(
+            child: Icon(Icons.person_outline, color: Colors.white,),
+            backgroundColor: Colors.grey[400],
+          ),
+          onTap: (){},
+        ),
+        ),
+        //members of the drawer
+        InkWell(
+          child: ListTile(
+            title: Text('Edit Profile'),
+            leading: Icon(Icons.edit)
+          ),
+        ),
+        InkWell(
+          child: ListTile(
+            title: Text('History'),
+            leading: Icon(Icons.history)
+          ),
+        ),
+        InkWell(
+          child: ListTile(
+            title: Text('Settings'),
+            leading: Icon(Icons.settings)
+          ),
+        ),
+        InkWell(
+          child: ListTile(
+            title: Text('Logout'),
+            leading: Icon(Icons.exit_to_app)
+          ),
+        ),
+          ]
+        ),
+
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.blueGrey[300],
