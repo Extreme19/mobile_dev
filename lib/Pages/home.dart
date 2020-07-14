@@ -4,6 +4,7 @@ import 'package:Orsul_v1/Tabs/homeTab.dart';
 import 'package:Orsul_v1/Tabs/jobsTab.dart';
 import 'package:Orsul_v1/Tabs/messageTab.dart';
 import 'package:Orsul_v1/Tabs/walletTab.dart';
+import 'package:Orsul_v1/models/jobListSearch.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -39,7 +40,18 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Orsul'),
+        title: Text('Our professionals are at your service'),
+        // actions: <Widget>[
+        //   IconButton(
+        //     icon: Icon(Icons.search), 
+        //     onPressed: (){
+        //       showSearch(                
+        //         context: context, 
+        //         delegate: JobListSearch()
+        //         );
+        //         },
+        //         )
+        // ],
       ),
       body: tabs[bottomNavIndex],
       // body: StreamBuilder<DocumentSnapshot>(
@@ -130,7 +142,8 @@ class _HomeState extends State<Home> {
             BottomNavigationBarItem(
             icon: Icon(Icons.storage),
             title: Text("Wallet"),
-            activeIcon: Icon(Icons.storage),
+            activeIcon: Icon(Icons.account_balance_wallet
+            ),
             backgroundColor: Colors.blue,
             ),
         ],
