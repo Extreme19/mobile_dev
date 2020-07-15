@@ -41,33 +41,10 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Our professionals are at your service'),
-        // actions: <Widget>[
-        //   IconButton(
-        //     icon: Icon(Icons.search), 
-        //     onPressed: (){
-        //       showSearch(                
-        //         context: context, 
-        //         delegate: JobListSearch()
-        //         );
-        //         },
-        //         )
-        // ],
+        
       ),
       body: tabs[bottomNavIndex],
-      // body: StreamBuilder<DocumentSnapshot>(
-      //   stream: Firestore.instance.collection('users').document(user.uid).snapshots(),
-      //   //the builder takes a Build context and an async snapshot of type document snapshot
-      //   builder: (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot){
-      //     if(snapshot.hasError){
-      //       return Text('Error: ${snapshot.error}');
-      //     }
-      //     switch(snapshot.connectionState){
-      //         case ConnectionState.waiting :return Text('Loading');
-      //         default :
-      //             return Text('welcome back ${snapshot.data['firstName']}');
-      //     }
-      //   },
-      //   )
+      
       drawer: Drawer(
         child: ListView(
           children:[

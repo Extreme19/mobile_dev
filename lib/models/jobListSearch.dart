@@ -9,8 +9,7 @@ class JobListSearch extends SearchDelegate<JobList>{
   //trailing button
   @override
   List<Widget> buildActions(BuildContext context) {
-      // TODO: implement buildActions
-      //throw UnimplementedError();
+      
       return [IconButton(
         icon: Icon(Icons.cancel), 
         onPressed: (){
@@ -21,8 +20,7 @@ class JobListSearch extends SearchDelegate<JobList>{
     //left hand side leading button
     @override
     Widget buildLeading(BuildContext context) {
-      // TODO: implement buildLeading
-      //throw UnimplementedError();
+      
       return IconButton(
         icon: Icon(Icons.arrow_back_ios), 
         onPressed: (){

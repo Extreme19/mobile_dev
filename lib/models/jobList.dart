@@ -39,26 +39,3 @@ class JobList {
   }
   
   
-  
-
-//   Widget searchJob(keyword){
-//     return SearchWidget<Map<String, dynamic>>(
-//    dataList: jobs,
-//    hideSearchBoxWhenItemSelected: false,
-//    listContainerHeight: MediaQuery.of(keyword).size.height / 4,
-//    queryBuilder: (String keyword, List<Map<String, dynamic>> jobList) {
-//      return jobList.where((jobList) => jobs[.toLowerCase().contains(query.toLowerCase())).toList();
-//    },
-//    popupListItemBuilder: (LeaderBoard item) {
-//      return PopupListItemWidget(item);
-//    },
-//    selectedItemBuilder: (LeaderBoard selectedItem, VoidCallback deleteSelectedItem) {
-//      return SelectedItemWidget(selectedItem, deleteSelectedItem);
-//    },
-//    // widget customization
-//    noItemsFoundWidget: NoItemsFound(),
-//    textFieldBuilder: (TextEditingController controller, FocusNode focusNode) {
-//      return MyTextField(controller, focusNode);
-//    },
-//  );
-  // }
