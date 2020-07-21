@@ -7,6 +7,7 @@ class EditProfile extends StatefulWidget {
 
 class _EditProfileState extends State<EditProfile> {
   bool isSwitched = true;
+  GlobalKey<FormState> _key = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +46,7 @@ class _EditProfileState extends State<EditProfile> {
               padding:
                   const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
               child: Form(
+                key: _key,
                 child: Column(
                   children: <Widget>[
                     TextFormField(

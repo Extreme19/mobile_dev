@@ -1,4 +1,6 @@
 
+//import 'dart:js';
+
 import 'package:Orsul_v1/models/jobList.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +35,7 @@ class JobListSearch extends SearchDelegate<JobList>{
     Widget buildResults(BuildContext context) {
       // TODO: implement buildResults
       
-      return Center(child: Text(query));
+      return query=='plumber'?  plumbers() :Center(child: Text(query));
     }
   
     //search term suggestions
@@ -44,7 +46,7 @@ class JobListSearch extends SearchDelegate<JobList>{
     //realtime search functions
     final myJobs = query.isEmpty
     ? listJobs() //if nothing is typed, display all the available jobs..
-    : listJobs().where((element) => element.title.contains(query)).toList(); //else display the relevant results.
+    : listJobs().where((element) => element.title.toLowerCase().contains(query.toLowerCase())).toList(); //else display the relevant results.
     return myJobs.isEmpty
     ? Text("Oops the service you searched for is currently unavailable...")//when search query is not found
     : ListView.builder(
@@ -69,5 +71,89 @@ class JobListSearch extends SearchDelegate<JobList>{
          );
       });
   }
+  Widget plumbers(){
+    return ListView
+    (children:[
+        plumber("James Joshua", "945", "73"),
+        plumber("Musa Chima", "989", "41"),
+        plumber("Femi Abdul", "923", "17"),
+        plumber("Obong Felix", "998", "12"),
+        plumber("Joyce Philips", "890", "20")
+    ]
+    );
+  }
   
+  Widget plumber(String name, String points, String completedJobs){
+    
+    return Column(
+      children: <Widget>[
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                //picture or avatar and name
+                Column(
+                  children: <Widget>[
+                    CircleAvatar(
+                      //child: Image.asset(''),
+                      child: Icon(Icons.person_outline),
+                      radius: 30.0,
+                    ),
+                    SizedBox(height:10),
+                    Text(name)
+                  ],
+                ),
+                SizedBox(width: 30,),
+                //Points, star rating, completed jobs
+                Column(
+                  children: <Widget>[
+                    //points
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0,22,35.0,0),
+                      child: Text('Points: $points'),
+                    ),
+                    SizedBox(height:5.0),
+                    //star rating
+                    Row(
+                      children: <Widget>[
+                        Text("       Rating: "),
+                        Icon(Icons.star, size: 15,),
+                        Icon(Icons.star, size: 15,),
+                        Icon(Icons.star, size: 15,),
+                        Icon(Icons.star, size: 15,),
+                        Icon(Icons.star_half, size: 15,),
+                      ],
+                    ),
+                    //completed jobs
+                    Text('   completedJobs: $completedJobs'),
+                    SizedBox(height:0),
+                    //book an appointment
+                    FlatButton(child: Text("Book Appointment"), 
+                    onPressed: (){
+                      // BuildContext context;
+                      //  awaitshowDialog<String>(
+                      //  context: context, 
+                      //   builder: (BuildContext context){
+                      //     return AlertDialog(
+                      //       content: Text('Are you willing to book this provider?'),
+                      //       actions: <Widget>[
+                      //         FlatButton(onPressed: ()=>Navigator.pop(context,'Cancelled'), child: Text('No')),
+                      //         FlatButton(onPressed: ()=>Navigator.pop(context,'Appointment booked, you\'ll be contacted soon'), child: Text('Yes'))
+                      //       ]
+                      //       ,
+                      //     );
+                      //   }
+                      // );
+                    }, textColor: Colors.blueAccent[100],)
+                  ],
+                )
+              ]
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 }
