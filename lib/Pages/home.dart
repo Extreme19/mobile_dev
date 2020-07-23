@@ -1,10 +1,12 @@
 //import 'dart:ffi';
 
 import 'package:Orsul_v1/Pages/editProfile.dart';
+import 'package:Orsul_v1/Pages/history.dart';
 import 'package:Orsul_v1/Tabs/homeTab.dart';
 import 'package:Orsul_v1/Tabs/jobsTab.dart';
 import 'package:Orsul_v1/Tabs/messageTab.dart';
 import 'package:Orsul_v1/Tabs/walletTab.dart';
+import 'package:Orsul_v1/models/bookAppointment.dart';
 import 'package:Orsul_v1/models/jobListSearch.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -65,7 +67,8 @@ class _HomeState extends State<Home> {
             child: ListTile(
               title: Text('History'),
               leading: Icon(Icons.history),
-              onTap: () {},
+              onTap: () => //temporary route
+              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => History())),
             ),
           ),
           InkWell(
