@@ -134,27 +134,19 @@ class _EditProfileState extends State<EditProfile> {
             ),
             Card(
               color: Colors.white,
-              child: Column(
-                children: <Widget>[
-                  ListTile(
-                    onTap: () {},
-                    title: Text(
-                      'Become a Service Provider',
-                      style: TextStyle(),
-                    ),
-                    trailing: Switch(
-                      value: isSwitched,
-                      onChanged: (value) {
-                        setState(() {
-                          isSwitched = value;
-                          print(isSwitched);
-                        });
-                      },
-                      activeTrackColor: Colors.tealAccent[300],
-                      activeColor: Colors.tealAccent[300],
-                    ),
-                  ),
-                ],
+              child: SwitchListTile(
+                title: Text(
+                  'Become a Service Provider',
+                ),
+                value: isSwitched,
+                onChanged: (value) {
+                  setState(() {
+                    isSwitched = value;
+                    print(isSwitched);
+                  });
+                },
+                activeTrackColor: Colors.tealAccent[300],
+                activeColor: Colors.tealAccent[300],
               ),
             ),
             Container(
