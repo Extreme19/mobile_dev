@@ -103,6 +103,12 @@ class _HomeState extends State<Home> {
                           children: <Widget>[
                             new FlatButton(
                               // Log out button of the dialog
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        WelcomePage()));
+                              },
                               child: new Text(
                                 "LOG OUT",
                                 style: TextStyle(
