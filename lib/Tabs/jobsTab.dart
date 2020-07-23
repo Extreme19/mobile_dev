@@ -13,9 +13,17 @@ class _JobsTabState extends State<JobsTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
+        
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(40))),
+        bottomOpacity: 0.5,
+        elevation: 0,
+        leading: Icon(Icons.arrow_left),
+        title: Text('Search Jobs', textAlign: TextAlign.end),
         actions:[
           IconButton(
+            tooltip: 'Search Jobs...',
             icon: Icon(Icons.search),
             onPressed: (){
               showSearch(context: context, delegate: JobListSearch());

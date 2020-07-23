@@ -22,46 +22,49 @@ final GlobalKey<FormState> _formKey= GlobalKey<FormState>();
         title: Text('Orsul Sign Up'),
         
       ),
-      body: Form(
-        key: _formKey,
-        
-        child: Column(
-          children: <Widget>[
-            //Implement form fields
-          TextFormField(
-            validator: (input){
-              if(input.isEmpty){
-                return 'please enter a valid email';
-              }
-              return null;
-            },
-            onSaved: (input)=> _email = input,
-            decoration: InputDecoration(
-              labelText: 'Email',
-              helperText: 'example@email.com',
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Form(
+          key: _formKey,
+          
+          child: Column(
+            children: <Widget>[
+              //Implement form fields
+            TextFormField(
+              validator: (input){
+                if(input.isEmpty){
+                  return 'please enter a valid email';
+                }
+                return null;
+              },
+              onSaved: (input)=> _email = input,
+              decoration: InputDecoration(
+                labelText: 'Email',
+                
+              ),
+              keyboardType: TextInputType.emailAddress,
             ),
-            keyboardType: TextInputType.emailAddress,
-          ),
-          TextFormField(
-            validator: (input){
-              if(input.length < 6){
-                return 'please create a longer password';
-              }
-              return null;
-            },
-            onSaved: (input)=> _password = input,
-            decoration: InputDecoration(
-              labelText: 'Password',
+            TextFormField(
+              validator: (input){
+                if(input.length < 6){
+                  return 'please create a longer password';
+                }
+                return null;
+              },
+              onSaved: (input)=> _password = input,
+              decoration: InputDecoration(
+                labelText: 'Password',
+              ),
+              obscureText: true,
             ),
-            obscureText: true,
+            RaisedButton(
+              onPressed: signUp,
+              child: Text('Sign Up'),
+              )
+            ]
+          ), 
           ),
-          RaisedButton(
-            onPressed: signUp,
-            child: Text('Sign Up'),
-            )
-          ]
-        ), 
-        ), 
+      ), 
     
     );
   }

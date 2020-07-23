@@ -2,6 +2,7 @@
 
 import 'package:Orsul_v1/Pages/editProfile.dart';
 import 'package:Orsul_v1/Pages/history.dart';
+import 'package:Orsul_v1/Setup/welcome.dart';
 import 'package:Orsul_v1/Tabs/homeTab.dart';
 import 'package:Orsul_v1/Tabs/jobsTab.dart';
 import 'package:Orsul_v1/Tabs/messageTab.dart';
@@ -82,7 +83,7 @@ class _HomeState extends State<Home> {
             child: ListTile(
               title: Text('Logout'),
               leading: Icon(Icons.exit_to_app),
-              onTap: () {},
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => WelcomePage())),
             ),
           ),
         ]),
@@ -116,7 +117,7 @@ class _HomeState extends State<Home> {
           ),
           //Wallet icon.
           BottomNavigationBarItem(
-            icon: Icon(Icons.storage),
+            icon: Icon(Icons.account_balance_wallet),
             title: Text("Wallet"),
             activeIcon: Icon(Icons.account_balance_wallet),
             backgroundColor: Colors.blue,
