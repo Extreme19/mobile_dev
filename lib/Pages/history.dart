@@ -4,8 +4,9 @@ class History extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Recent Transactions',style: TextStyle(fontWeight: FontWeight.bold)),
-        backgroundColor: Colors.teal[900],
+        title: Text('Recent Transactions',
+        style: Theme.of(context).textTheme.headline6.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
+        //backgroundColor: Colors.teal[900],
         elevation: 0,
       ),
       backgroundColor: Colors.blueGrey[100],

@@ -89,7 +89,7 @@ class _HomeState extends State<Home> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.blueGrey[300],
+        backgroundColor: Colors.teal[300],
         currentIndex: bottomNavIndex,
         selectedFontSize: 15.0,
         items: [

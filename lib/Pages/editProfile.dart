@@ -126,6 +126,7 @@ class _EditProfileState extends State<EditProfile> {
                     },
                     activeTrackColor: Colors.blue[100],
                     activeColor: Colors.blue,
+                    
                   ),
                 ),
               ],
