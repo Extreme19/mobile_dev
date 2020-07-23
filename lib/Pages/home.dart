@@ -1,6 +1,8 @@
 //import 'dart:ffi';
 
 import 'package:Orsul_v1/Pages/editProfile.dart';
+import 'package:Orsul_v1/Pages/settings.dart';
+import 'package:Orsul_v1/Pages/history.dart';
 import 'package:Orsul_v1/Tabs/homeTab.dart';
 import 'package:Orsul_v1/Tabs/jobsTab.dart';
 import 'package:Orsul_v1/Tabs/messageTab.dart';
@@ -72,14 +74,60 @@ class _HomeState extends State<Home> {
             child: ListTile(
               title: Text('Settings'),
               leading: Icon(Icons.settings),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => Settings()));
+              },
             ),
           ),
           InkWell(
             child: ListTile(
               title: Text('Logout'),
               leading: Icon(Icons.exit_to_app),
-              onTap: () {},
+              onTap: () {
+                //Dialogbox on logout
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: new Text("LOG OUT"),
+                      content: new Text(
+                          "Are you sure you want to log out of this account?"),
+                      actions: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            new FlatButton(
+                              // Log out button of the dialog
+                              child: new Text(
+                                "LOG OUT",
+                                style: TextStyle(
+                                  color: Colors.grey[600],
+                                  fontSize: 15.0,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 15.0,
+                            ),
+                            // cancell button of the dialog
+                            new FlatButton(
+                              child: Text('CANCEL',
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: 15.0,
+                                  )),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            )
+                          ],
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
             ),
           ),
         ]),
