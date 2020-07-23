@@ -1,4 +1,5 @@
 import 'package:Orsul_v1/Setup/welcome.dart';
+import 'package:Orsul_v1/models/theme.dart';
 import 'package:flutter/material.dart';
 
 
@@ -13,10 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Orsul',
-      theme: ThemeData(        
-        primarySwatch: Colors.blue,
-        
-      ),
+      theme: orsulTheme(),
       debugShowCheckedModeBanner: false,
       home: WelcomePage(),
     );

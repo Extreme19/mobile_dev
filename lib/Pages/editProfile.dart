@@ -140,9 +140,7 @@ class _EditProfileState extends State<EditProfile> {
                     onTap: () {},
                     title: Text(
                       'Become a Service Provider',
-                      style: TextStyle(
-                        color: Colors.blue,
-                      ),
+                      style: TextStyle(),
                     ),
                     trailing: Switch(
                       value: isSwitched,
@@ -152,8 +150,8 @@ class _EditProfileState extends State<EditProfile> {
                           print(isSwitched);
                         });
                       },
-                      activeTrackColor: Colors.blue[100],
-                      activeColor: Colors.blue,
+                      activeTrackColor: Colors.tealAccent[300],
+                      activeColor: Colors.tealAccent[300],
                     ),
                   ),
                 ],

@@ -1,8 +1,12 @@
 
 //import 'dart:js';
 
+
+
+//import 'package:Orsul_v1/models/bookAppointment.dart';
 import 'package:Orsul_v1/models/jobList.dart';
 import 'package:flutter/material.dart';
+
 
 
 //search delegate class for listing jobs.
@@ -131,22 +135,15 @@ class JobListSearch extends SearchDelegate<JobList>{
                     SizedBox(height:0),
                     //book an appointment
                     FlatButton(child: Text("Book Appointment"), 
+                    
                     onPressed: (){
-                      // BuildContext context;
-                      //  awaitshowDialog<String>(
-                      //  context: context, 
-                      //   builder: (BuildContext context){
-                      //     return AlertDialog(
-                      //       content: Text('Are you willing to book this provider?'),
-                      //       actions: <Widget>[
-                      //         FlatButton(onPressed: ()=>Navigator.pop(context,'Cancelled'), child: Text('No')),
-                      //         FlatButton(onPressed: ()=>Navigator.pop(context,'Appointment booked, you\'ll be contacted soon'), child: Text('Yes'))
-                      //       ]
-                      //       ,
-                      //     );
-                      //   }
-                      // );
-                    }, textColor: Colors.blueAccent[100],)
+                      return Column(
+                        children: <Widget>[
+                          Text('appointment booked'),
+                        ],
+                      );
+                    },
+                     textColor: Colors.blueAccent[100],)
                   ],
                 )
               ]

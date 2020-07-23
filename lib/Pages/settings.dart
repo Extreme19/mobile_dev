@@ -26,7 +26,7 @@ class _SettingsState extends State<Settings> {
                   title: Text(
                     'Invite Friends',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.blue, fontSize: 17.0),
+                    style: TextStyle(fontSize: 17.0),
                   ),
                 )),
             Row(

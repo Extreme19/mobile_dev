@@ -1,12 +1,14 @@
 //import 'dart:ffi';
 
 import 'package:Orsul_v1/Pages/editProfile.dart';
-import 'package:Orsul_v1/Pages/settings.dart';
 import 'package:Orsul_v1/Pages/history.dart';
+import 'package:Orsul_v1/Pages/settings.dart';
+import 'package:Orsul_v1/Setup/welcome.dart';
 import 'package:Orsul_v1/Tabs/homeTab.dart';
 import 'package:Orsul_v1/Tabs/jobsTab.dart';
 import 'package:Orsul_v1/Tabs/messageTab.dart';
 import 'package:Orsul_v1/Tabs/walletTab.dart';
+import 'package:Orsul_v1/models/bookAppointment.dart';
 import 'package:Orsul_v1/models/jobListSearch.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -67,7 +69,9 @@ class _HomeState extends State<Home> {
             child: ListTile(
               title: Text('History'),
               leading: Icon(Icons.history),
-              onTap: () {},
+              onTap: () => //temporary route
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => History())),
             ),
           ),
           InkWell(
@@ -134,7 +138,7 @@ class _HomeState extends State<Home> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.blueGrey[300],
+        backgroundColor: Colors.teal[300],
         currentIndex: bottomNavIndex,
         selectedFontSize: 15.0,
         items: [
@@ -161,7 +165,7 @@ class _HomeState extends State<Home> {
           ),
           //Wallet icon.
           BottomNavigationBarItem(
-            icon: Icon(Icons.storage),
+            icon: Icon(Icons.account_balance_wallet),
             title: Text("Wallet"),
             activeIcon: Icon(Icons.account_balance_wallet),
             backgroundColor: Colors.blue,

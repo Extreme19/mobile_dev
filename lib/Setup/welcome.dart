@@ -27,7 +27,7 @@ class _WelcomePageState extends State<WelcomePage> {
           onPressed: navigateToSignUp,
           ),
           RaisedButton(
-          child: Text('Test Home'),
+          child: Text('Demo'),
           onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (context) => Home())),
           )
         ]
