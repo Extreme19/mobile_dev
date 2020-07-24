@@ -44,6 +44,15 @@ ThemeData orsulTheme(){
     iconTheme: IconThemeData(
       color: Colors.indigo[900],
       size: 20.0,
-    )
+    ),
+    buttonColor: Colors.lightBlue[800],
+    tabBarTheme: base.tabBarTheme.copyWith(
+      labelColor: Colors.white,
+
+    ),
+    scaffoldBackgroundColor: Colors.grey[400],
+    backgroundColor: Colors.grey[300],
+    dialogBackgroundColor: Colors.teal[100]
+
   );
 }
