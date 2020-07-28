@@ -1,5 +1,6 @@
 //import 'dart:ffi';
 
+import 'package:Orsul_v1/Pages/Order.dart';
 import 'package:Orsul_v1/Pages/editProfile.dart';
 import 'package:Orsul_v1/Pages/history.dart';
 import 'package:Orsul_v1/Pages/settings.dart';
@@ -10,6 +11,7 @@ import 'package:Orsul_v1/Tabs/messageTab.dart';
 import 'package:Orsul_v1/Tabs/walletTab.dart';
 import 'package:Orsul_v1/models/bookAppointment.dart';
 import 'package:Orsul_v1/models/jobListSearch.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -32,11 +34,13 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         title: Text('Our professionals are at your service'),
       ),
       body: tabs[bottomNavIndex],
+      
       drawer: Drawer(
         child: ListView(children: [
           UserAccountsDrawerHeader(
@@ -72,6 +76,15 @@ class _HomeState extends State<Home> {
               onTap: () => //temporary route
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (BuildContext context) => History())),
+            ),
+          ),
+          InkWell(
+            child: ListTile(
+              title: Text('Service Orders'),
+              leading: Icon(Icons.art_track),
+              onTap: () => //temporary route
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => Order())),
             ),
           ),
           InkWell(
@@ -185,6 +198,7 @@ class _HomeState extends State<Home> {
         unselectedItemColor: Colors.grey[100],
         selectedItemColor: Colors.yellowAccent[700],
       ),
+      
     );
   }
 }
