@@ -37,10 +37,12 @@ class _HomeState extends State<Home> {
     
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         title: Text('Our professionals are at your service'),
       ),
-      body: tabs[bottomNavIndex],
-      
+      body:        
+        tabs[bottomNavIndex],
+            
       drawer: Drawer(
         child: ListView(children: [
           UserAccountsDrawerHeader(

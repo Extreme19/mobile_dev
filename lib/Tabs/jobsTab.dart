@@ -12,26 +12,36 @@ class _JobsTabState extends State<JobsTab> {
   //SearchBarController _searchBarController;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      
-      appBar: AppBar(
+    return Padding(
+      padding: const EdgeInsets.only(top:12.0),
+      child: Scaffold(
         
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(40))),
-        bottomOpacity: 0.5,
-        elevation: 0,
-        leading: Icon(Icons.arrow_left),
-        title: Text('Search Jobs', textAlign: TextAlign.end),
-        actions:[
-          IconButton(
-            tooltip: 'Search Jobs...',
-            icon: Icon(Icons.search),
-            onPressed: (){
-              showSearch(context: context, delegate: JobListSearch());
-            },
-          )
-        ]
+        appBar: AppBar(
+          
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(40))),
+          bottomOpacity: 0.5,
+          elevation: 0,
+          leading: Icon(Icons.arrow_left),
+          title: Text('Search Jobs', textAlign: TextAlign.end),
+          actions:[
+            IconButton(
+              tooltip: 'Search Jobs...',
+              icon: Icon(Icons.search),
+              onPressed: (){
+                showSearch(context: context, delegate: JobListSearch());
+              },
+            ),
+            IconButton(
+              //tooltip: 'Search Jobs...',
+              icon: Icon(Icons.location_on),
+              onPressed: (){
+                showSearch(context: context, delegate: null);
+              },
+            )
+          ]
+        ),
+         
       ),
-       
     );      
   }
 }
