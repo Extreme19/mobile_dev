@@ -59,7 +59,8 @@ class _WalletTabState extends State<WalletTab> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Container(
-            width: 120.0,
+            margin: EdgeInsets.symmetric(vertical: 15.0),
+            width: 110.0,
             height: 110.0,
             color: Colors.white,
             child: FlatButton.icon(
@@ -69,12 +70,14 @@ class _WalletTabState extends State<WalletTab> {
             ),
           ),
           Container(
-            width: 120.0,
+            margin: EdgeInsets.symmetric(vertical: 15.0),
+            width: 110.0,
             height: 110.0,
             color: Colors.white,
           ),
           Container(
-            width: 120.0,
+            margin: EdgeInsets.symmetric(vertical: 15.0),
+            width: 110.0,
             height: 110.0,
             color: Colors.white,
             child: FlatButton.icon(
