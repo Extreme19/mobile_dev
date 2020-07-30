@@ -59,26 +59,28 @@ class _WalletTabState extends State<WalletTab> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 0.0),
-            width: 110.0,
+            width: 120.0,
             height: 110.0,
             color: Colors.white,
-            child: Icon(
-              Icons.add,
+            child: FlatButton.icon(
+              icon: Icon(Icons.add),
+              label: Text('Wallet'),
+              onPressed: () {},
             ),
           ),
           Container(
-            width: 110.0,
+            width: 120.0,
             height: 110.0,
             color: Colors.white,
           ),
           Container(
-            width: 110.0,
+            width: 120.0,
             height: 110.0,
             color: Colors.white,
-            child: Icon(
-              Icons.compare_arrows,
-              semanticLabel: 'Transfer',
+            child: FlatButton.icon(
+              icon: Icon(Icons.compare_arrows),
+              label: Text('Transfer'),
+              onPressed: () {},
             ),
           ),
         ],
