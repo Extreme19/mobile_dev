@@ -65,7 +65,7 @@ class _WalletTabState extends State<WalletTab> {
             color: Colors.white,
             child: FlatButton.icon(
               icon: Icon(Icons.add),
-              label: Text('Wallet'),
+              label: Text('Add'),
               onPressed: () {},
             ),
           ),
@@ -74,15 +74,20 @@ class _WalletTabState extends State<WalletTab> {
             width: 110.0,
             height: 110.0,
             color: Colors.white,
+            child: FlatButton.icon(
+              icon: Icon(Icons.swap_horiz),
+              label: Text('Transfer'),
+              onPressed: () {},
+            ),
           ),
           Container(
             margin: EdgeInsets.symmetric(vertical: 15.0),
-            width: 110.0,
+            width: 115.0,
             height: 110.0,
             color: Colors.white,
             child: FlatButton.icon(
-              icon: Icon(Icons.compare_arrows),
-              label: Text('Transfer'),
+              icon: Icon(Icons.view_headline),
+              label: Text('Withdraw'),
               onPressed: () {},
             ),
           ),
