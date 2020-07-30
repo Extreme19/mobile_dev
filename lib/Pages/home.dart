@@ -38,7 +38,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        title: Text('Our professionals are at your service'),
+        title: Text('Orsul Services'),
       ),
       body:        
         tabs[bottomNavIndex],
@@ -47,16 +47,22 @@ class _HomeState extends State<Home> {
         child: ListView(children: [
           UserAccountsDrawerHeader(
             accountName: Text("Joshua"),
-            accountEmail: Text("adeniyioojo09@gmail.com"),
+            accountEmail: Text("joshadeyemo22@test.com"),
+
+            decoration: BoxDecoration(
+              color: Colors.teal[400],
+                   borderRadius: (BorderRadius.only(bottomRight: Radius.circular(50)))
+                 ),
             currentAccountPicture: GestureDetector(
-              child: CircleAvatar(
-                child: Icon(
-                  Icons.person_outline,
-                  color: Colors.white,
-                ),
-                backgroundColor: Colors.grey[400],
+              child: Container(
+                //constraints: BoxConstraints.tight(Size.fromRadius(100)),
+                child: Image.asset('assets/images/logo.jpg'),
+                // decoration: BoxDecoration(
+                //   borderRadius: (BorderRadius.circular(80))
+                // ),
               ),
               onTap: () {},
+              
             ),
           ),
           //members of the drawer
@@ -198,7 +204,7 @@ class _HomeState extends State<Home> {
           });
         },
         unselectedItemColor: Colors.grey[100],
-        selectedItemColor: Colors.yellowAccent[700],
+        selectedItemColor: Colors.indigo[900],
       ),
       
     );

@@ -35,6 +35,7 @@ class _JobsTabState extends State<JobsTab> {
               //tooltip: 'Search Jobs...',
               icon: Icon(Icons.location_on),
               onPressed: (){
+                //TODO: create a google map option 
                 showSearch(context: context, delegate: null);
               },
             )

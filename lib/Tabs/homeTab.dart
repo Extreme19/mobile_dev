@@ -102,13 +102,13 @@ class _HomeTabState extends State<HomeTab> {
                         Text('Location: 312 Herbert Macaulay..'),
                         //Upload Picture
                         Padding(
-                          padding: const EdgeInsets.only(right:38.0),
+                          padding: const EdgeInsets.only(right:108.0),
                           child: Row(
                             children: <Widget>[
-                              Text('Upload picture',
+                              Text('Like',
                               style: Theme.of(context).textTheme.headline6.copyWith(color: Colors.teal,fontSize: 15.0),),
                               IconButton(
-                                icon: Icon(Icons.add_photo_alternate),
+                                icon: Icon(Icons.thumb_up),
                                       onPressed: (){
                                         //upload image method
 

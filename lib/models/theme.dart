@@ -50,9 +50,17 @@ ThemeData orsulTheme(){
       labelColor: Colors.white,
 
     ),
-    scaffoldBackgroundColor: Colors.grey[400],
-    backgroundColor: Colors.grey[300],
-    dialogBackgroundColor: Colors.teal[100]
+    scaffoldBackgroundColor: Colors.teal[50],
+    backgroundColor: Colors.teal[50],
+    dialogBackgroundColor: Colors.teal[100],
+    primaryIconTheme: IconThemeData(
+      color: Colors.indigo[900],
+      size: 20.0,
+    ),
+    // appBarTheme: AppBarTheme(
+    //   color: Colors.indigo[900],
+    //   elevation: 0.0,
+    // ),
 
   );
 }

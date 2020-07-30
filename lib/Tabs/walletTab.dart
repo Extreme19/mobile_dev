@@ -22,7 +22,7 @@ class _WalletTabState extends State<WalletTab> {
             child: ListTile(
               leading: Icon(Icons.account_balance_wallet),
               title: Text('3456 4567 2567 5674'),
-              subtitle: Text('Kolawole Caleb'),
+              subtitle: Text('Joshua Adeyemo'),
             ),
           ),
         ),
