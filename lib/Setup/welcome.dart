@@ -19,15 +19,18 @@ class _WelcomePageState extends State<WelcomePage> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           RaisedButton(
-            child: Text('Sign in'),
+            color: Colors.teal[400],
+            child: Text('Sign In', style: Theme.of(context).textTheme.headline6.copyWith(color:Colors.white)),
             onPressed: navigateToSignIn,
             ),
           RaisedButton(
-          child: Text('Sign Up'),
+            color: Colors.teal[400],
+          child: Text('Sign Up', style: Theme.of(context).textTheme.headline6.copyWith(color:Colors.white)),
           onPressed: navigateToSignUp,
           ),
           RaisedButton(
-          child: Text('Demo'),
+            color: Colors.teal[400],
+          child: Text('Demo', style: Theme.of(context).textTheme.headline6.copyWith(color:Colors.white),),
           onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (context) => Home())),
           )
         ]

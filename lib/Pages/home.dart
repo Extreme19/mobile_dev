@@ -69,7 +69,7 @@ class _HomeState extends State<Home> {
           InkWell(
             child: ListTile(
               title: Text('Edit Profile'),
-              leading: Icon(Icons.edit),
+              leading: Icon(Icons.edit,color: Colors.indigo[900],),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
@@ -80,7 +80,7 @@ class _HomeState extends State<Home> {
           InkWell(
             child: ListTile(
               title: Text('History'),
-              leading: Icon(Icons.history),
+              leading: Icon(Icons.history,color: Colors.indigo[900],),
               onTap: () => //temporary route
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (BuildContext context) => History())),
@@ -89,16 +89,25 @@ class _HomeState extends State<Home> {
           InkWell(
             child: ListTile(
               title: Text('Service Orders'),
-              leading: Icon(Icons.art_track),
+              leading: Icon(Icons.art_track,color: Colors.indigo[900],),),
               onTap: () => //temporary route
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (BuildContext context) => Order())),
+            ),
+          
+          InkWell(
+            child: ListTile(
+              title: Text('Off-Orsul Services'),
+              leading: Icon(Icons.contact_phone,color: Colors.indigo[900],),
+              onTap: () =>{} //temporary route
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (BuildContext context) => Order())),
             ),
           ),
           InkWell(
             child: ListTile(
               title: Text('Settings'),
-              leading: Icon(Icons.settings),
+              leading: Icon(Icons.settings,color: Colors.indigo[900],size: 25,),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
@@ -109,7 +118,7 @@ class _HomeState extends State<Home> {
           InkWell(
             child: ListTile(
               title: Text('Logout'),
-              leading: Icon(Icons.exit_to_app),
+              leading: Icon(Icons.exit_to_app,color: Colors.indigo[900],),
               onTap: () {
                 //Dialogbox on logout
                 showDialog(
