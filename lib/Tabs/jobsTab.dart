@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flappy_search_bar/flappy_search_bar.dart';
 
 
+
 class JobsTab extends StatefulWidget {
   @override
   _JobsTabState createState() => _JobsTabState();
@@ -41,6 +42,7 @@ class _JobsTabState extends State<JobsTab> {
             )
           ]
         ),
+        body: JobListSearch().plumbers(),
          
       ),
     );      

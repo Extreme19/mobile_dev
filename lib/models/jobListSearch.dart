@@ -131,7 +131,7 @@ class JobListSearch extends SearchDelegate<JobList>{
                       ],
                     ),
                     //completed jobs
-                    Text('   completedJobs: $completedJobs'),
+                    Text('   completed Jobs: $completedJobs'),
                     SizedBox(height:0),
                     //book an appointment
                     FlatButton(child: Text("Book Appointment"), 
