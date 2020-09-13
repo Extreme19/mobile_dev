@@ -1,6 +1,7 @@
 # contact_josh
 
-A new Flutter project.
+A new Flutter project; a single page app for contacting me.
+Appicon.co to generate icon for the App, use the generated files to replace the files in Adndroid> App> src> main> Res then rebuild the app to bundle the new Icon to it.
 
 ## Getting Started
 
